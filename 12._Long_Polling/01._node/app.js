@@ -11,8 +11,12 @@ app.get("/events/subscribe", (req, res) => {
 
     clients.push(res);
 
+    console.log('A new client has subscribed', clients.length);
+
     req.on('close', () => {
+        console.log('A client has unsubscribed');
         clients = clients.filter((client) => client !== res);
+        console.log('Number of clients remaining', clients.length);
     });
 });
 
