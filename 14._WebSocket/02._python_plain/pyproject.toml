@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "02-python-plain"
+version = "0.1.0"
+description = ""
+authors = ["Marcus <marc303i@stud.kea.dk>"]
+readme = "README.md"
+packages = [{include = "02"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+websockets = "^15.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
