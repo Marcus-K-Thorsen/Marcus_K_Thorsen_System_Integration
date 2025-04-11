@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_system_integration_migrations_container # Name for the container
+    env_file:
+      - .env
+    ports:
+      - "${MYSQL_PORT}:3306"
+    environment:
+      - MYSQL_HOST=${MYSQL_HOST}
+    volumes:
+      - system_integration_db_migrations_data:/var/lib/mysql # Persistent storage for MySQL data
+      - ./initdb/init.sql:/docker-entrypoint-initdb.d/init.sql # Initialize the database with a script
+
+volumes:
+  system_integration_db_migrations_data:
+
