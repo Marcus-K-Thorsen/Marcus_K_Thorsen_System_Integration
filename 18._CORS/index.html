@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS</title>
+</head>
+<body>
+    <h2>Timestamp from Express</h2>
+    <p id="timestamp-express"></p>
+    
+    <script>
+        fetch("http://localhost:8080/preflight/timestamp")
+        .then((response) => response.json())
+        .then((result) => {
+            const timestampExpressParagraph = document.getElementById("timestamp-express");
+            timestampExpressParagraph.textContent = result.time;
+        })
+        .catch((error) => {
+            console.error("CORS Error:", error);
+        });
+    </script>
+</body>
+</html>
