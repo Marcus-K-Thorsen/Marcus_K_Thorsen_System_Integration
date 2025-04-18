@@ -1,0 +1,147 @@
+{
+    "schema": [
+        {
+            "table": "accounts",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "int",
+                    "null": "NO",
+                    "key": "PRI",
+                    "extra": "auto_increment",
+                    "typeJS": "Number"
+                },
+                {
+                    "field": "name",
+                    "type": "varchar(50)",
+                    "null": "NO",
+                    "typeJS": "String"
+                },
+                {
+                    "field": "description",
+                    "type": "varchar(200)",
+                    "null": "YES",
+                    "typeJS": "String"
+                },
+                {
+                    "field": "created_at",
+                    "type": "date",
+                    "null": "NO",
+                    "typeJS": "Date"
+                }
+            ]
+        },
+        {
+            "table": "alembic_version",
+            "columns": [
+                {
+                    "field": "version_num",
+                    "type": "varchar(32)",
+                    "null": "NO",
+                    "key": "PRI",
+                    "typeJS": "String"
+                }
+            ]
+        },
+        {
+            "table": "knex_migrations",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "int unsigned",
+                    "null": "NO",
+                    "key": "PRI",
+                    "extra": "auto_increment",
+                    "typeJS": "Number"
+                },
+                {
+                    "field": "name",
+                    "type": "varchar(255)",
+                    "null": "YES",
+                    "typeJS": "String"
+                },
+                {
+                    "field": "batch",
+                    "type": "int",
+                    "null": "YES",
+                    "typeJS": "Number"
+                },
+                {
+                    "field": "migration_time",
+                    "type": "timestamp",
+                    "null": "YES",
+                    "typeJS": "String"
+                }
+            ]
+        },
+        {
+            "table": "knex_migrations_lock",
+            "columns": [
+                {
+                    "field": "index",
+                    "type": "int unsigned",
+                    "null": "NO",
+                    "key": "PRI",
+                    "extra": "auto_increment",
+                    "typeJS": "Number"
+                },
+                {
+                    "field": "is_locked",
+                    "type": "int",
+                    "null": "YES",
+                    "typeJS": "Number"
+                }
+            ]
+        },
+        {
+            "table": "products",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "int unsigned",
+                    "null": "NO",
+                    "key": "PRI",
+                    "extra": "auto_increment",
+                    "typeJS": "Number"
+                },
+                {
+                    "field": "price",
+                    "type": "decimal(10,2)",
+                    "null": "NO",
+                    "typeJS": "String"
+                },
+                {
+                    "field": "name",
+                    "type": "varchar(1000)",
+                    "null": "NO",
+                    "typeJS": "String"
+                }
+            ]
+        },
+        {
+            "table": "users",
+            "columns": [
+                {
+                    "field": "id",
+                    "type": "int unsigned",
+                    "null": "NO",
+                    "key": "PRI",
+                    "extra": "auto_increment",
+                    "typeJS": "Number"
+                },
+                {
+                    "field": "first_name",
+                    "type": "varchar(255)",
+                    "null": "NO",
+                    "typeJS": "String"
+                },
+                {
+                    "field": "last_name",
+                    "type": "varchar(255)",
+                    "null": "NO",
+                    "typeJS": "String"
+                }
+            ]
+        }
+    ]
+}
