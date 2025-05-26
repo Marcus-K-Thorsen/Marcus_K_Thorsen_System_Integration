@@ -26,11 +26,7 @@ This project contains two simple servers you can use to receive GitHub webhook e
     ```sh
     cd 25._GitHub_Webhooks/01._node
     ```
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
-3. Start the server:
+2. Start the server:
     ```sh
     nodemon app.js
     ```
@@ -41,12 +37,7 @@ This project contains two simple servers you can use to receive GitHub webhook e
     ```sh
     cd 25._GitHub_Webhooks/02._python
     ```
-2. (Recommended) Use Poetry for dependencies:
-    ```sh
-    poetry install
-    poetry shell
-    ```
-3. Start the FastAPI server:
+2. Start the FastAPI server:
     ```sh
     poetry run uvicorn main:app --reload
     ```
@@ -88,10 +79,3 @@ Copy the generated public URL (for example, `https://my-js-github-webhook.loca.l
 - Watch your terminal where the Node.js or Python server is running. You should see the webhook payload printed out.
 
 ---
-
-## Summary
-
-- Webhooks let GitHub notify your server in real time when events happen.
-- Use the provided Node.js or Python server to receive and print webhook payloads.
-- Use ngrok to expose your local server to GitHub.
-- Set up the webhook in your GitHub repo settings using your ngrok URL.
