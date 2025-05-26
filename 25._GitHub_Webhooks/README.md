@@ -73,10 +73,10 @@ Copy the generated public URL (for example, `https://my-js-github-webhook.loca.l
 2. Click **Settings** > **Webhooks** > **Add webhook**.
 3. In the **Payload URL** field, paste your localtunnel public URL and add the correct endpoint:
     - For JSON payloads:  
-      `https://abcd1234.ngrok.io/githubwebhookjson`
+      `https://my-js-github-webhook.loca.lt/githubwebhookjson`
     - For form payloads:  
-      `https://abcd1234.ngrok.io/githubwebhookform`
-4. Set the **Content type** to `application/json` (recommended).
+      `https://my-py-github-webhook.loca.lt/githubwebhookform`
+4. Set the **Content type** to `application/json` (for `/githubwebhookjson`) or `application/x-www-form-urlencoded` (for `/githubwebhookform`).
 5. Choose which events you want to receive (e.g., "Just the push event" or "Send me everything").
 6. Click **Add webhook** to save.
 
