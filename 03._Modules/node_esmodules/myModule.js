@@ -4,4 +4,10 @@ class ClassA {
     }
 }
 
+export class ClassB {
+    constructor() {
+        console.log("Class B initialized");
+    }
+}
+
 export default ClassA;

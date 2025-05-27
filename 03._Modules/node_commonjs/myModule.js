@@ -4,4 +4,11 @@ class ClassA {
     }
 }
 
+class ClassB {
+    constructor() {
+        console.log("Class B initialized");
+    }
+}
+
 module.exports = ClassA;
+module.exports.ClassB = ClassB;
