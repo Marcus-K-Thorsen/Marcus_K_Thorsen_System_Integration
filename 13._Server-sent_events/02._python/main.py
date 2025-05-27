@@ -25,18 +25,3 @@ async def date_generator():
 @app.get("/sse")
 def sse():
     return StreamingResponse(date_generator(), media_type="text/event-stream")
-
-
-async def message_generator():
-    while True:
-        if messages:
-            message = messages.pop(0)
-            yield f"data: {message}\n\n"
-        await asyncio.sleep(1)
-
-@app.get("/sse/:message")
-def sse_message(message: str = Query(...)):
-    messages.append(message)
-    print(message)
-    return StreamingResponse(message_generator(), media_type="text/event-stream")
-
