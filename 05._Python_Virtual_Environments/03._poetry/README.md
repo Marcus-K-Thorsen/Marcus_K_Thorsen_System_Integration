@@ -35,3 +35,17 @@ Follow these steps:
    ```
    exit
    ```
+
+   # Pros and Cons of using Poetry
+
+**Pros:**
+- Manages dependencies and virtual environments in one tool.
+- Uses `pyproject.toml` and `poetry.lock` for reproducible and consistent installs.
+- Handles dependency resolution and prevents version conflicts.
+- Easy to publish packages to PyPI.
+- Provides simple commands for adding, updating, and removing packages.
+
+**Cons:**
+- Not included with Python by default (requires separate installation).
+- Can be slower than basic pip/venv for some operations.
+- May have compatibility issues with some less common packages or workflows.

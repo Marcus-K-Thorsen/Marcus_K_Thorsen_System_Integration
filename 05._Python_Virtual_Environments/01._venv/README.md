@@ -31,3 +31,16 @@ Follow these steps:
    ```
    deactivate
    ```
+
+
+   # Pros and Cons of using venv
+
+**Pros:**
+- Keeps project dependencies isolated from other Python projects and the system Python.
+- Simple to use and included with Python (no extra installation needed).
+- Helps avoid version conflicts between packages.
+
+**Cons:**
+- Does not manage package versions across projects (no lock file by default).
+- Manual activation/deactivation required for each terminal session.
+- Lacks some advanced features found in tools like pipenv or poetry (e.g., dependency resolution, easier environment management).

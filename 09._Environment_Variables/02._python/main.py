@@ -8,9 +8,12 @@ import os
 
 load_dotenv()
 # Contains the environment variables from the .env file like "API_KEY" and "SECRET_KEY"
+print()
 
-print(os.getenv("API_KEY"))
+print("os.getenv 'API_KEY':", os.getenv("API_KEY"))
 
 
 config = dotenv_values(".env")
-print(config["API_KEY"])
+print("dotenv_values 'MY_SECRET':", config["MY_SECRET"])
+
+print()
