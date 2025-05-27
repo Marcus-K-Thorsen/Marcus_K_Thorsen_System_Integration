@@ -18,3 +18,9 @@ Then add the following key-value pair in top-level of `package.json`:
 ```sh
 nodemon app.js
 ```
+
+# What is this project about?
+
+This project is a simple Node.js application that demonstrates how to use GraphQL with Express to manage movies and actors. You can query, add, and relate movies and actors using a GraphQL API.
+
+It is called **"node intermediary"** because the Node.js server acts as an intermediary layer between the client and the underlying data, handling all GraphQL queries and mutations.
