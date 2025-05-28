@@ -3,11 +3,12 @@ const app = express();
 
 app.use(express.json());
 
-import usersRouter from './routers/usersRouter.js';
-app.use(usersRouter);
 
-import swaggerJSdoc from 'swagger-jsdoc';
-const swaggerDefinition = {
+
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
+
+const swaggerOptions = {
     definition: {
         openapi: '3.1.0',
         info: {
@@ -18,14 +19,13 @@ const swaggerDefinition = {
     apis: ['./routers/*Router.js']
 };
 
-const swaggerOptions = {
-    swaggerDefinition,
-    apis: ['./routers/*Router.js']
-};
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
-import swaggerUi from 'swagger-ui-express';
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerJSdoc(swaggerOptions)));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+
+import usersRouter from './routers/usersRouter.js';
+app.use(usersRouter);
 
 const PORT = process.env.PORT ?? 8080;
 app.listen(PORT, () => {
