@@ -8,6 +8,5 @@ $ poetry add fastapi uvicorn
 # How to run
 
 ```bash
-$ poetry shell
-$ uvicorn main:app --reload
+$ poetry run uvicorn main:app --reload
 ```
