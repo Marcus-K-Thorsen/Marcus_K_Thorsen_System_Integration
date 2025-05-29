@@ -53,6 +53,8 @@
     </form>
 
     <script>
+        // Has only selected the Node.js Express file input
+        // This script is for client-side validation of the file input
         const fileInput = document.querySelector('input[type="file"]')
 
         fileInput.addEventListener('change', (event) => {
@@ -66,7 +68,7 @@
                 return;
             }
       
-            const maxSize = 20 * 1024 * 1024; // 20MB
+            const maxSize = 3 * 1024 * 1024; // 3MB
             if (file.size > maxSize) {
                 alert(`File too big. Max size: ${maxSize} bytes`);
                 fileInput.value = "";

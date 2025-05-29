@@ -5,11 +5,14 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 import multer from 'multer';
-// const upload = multer({ dest: 'uploads/' });
+
+const uploadsDir = './uploads';
+const maxSize = 3 * 1024 * 1024; // 3MB
+const validMimeTypes = ["image/png", "image/svg", "image/jpeg"];
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(undefined, './uploads');
+        cb(undefined, uploadsDir);
     },
     filename: (req, file, cb) => {
         const uniquePrefix = Date.now() + "-" + Math.round(Math.random() * 1E9);
@@ -20,10 +23,9 @@ const storage = multer.diskStorage({
 });
 
 function fileFilter(req, file, cb) {
-    const validTypes = ["image/png", "image/svg", "image/jpeg"];
 
-    if (!validTypes.includes(file.mimetype)) {
-        cb(new Error("File type not allowed" + file.mimetype), false);
+    if (!validMimeTypes.includes(file.mimetype)) {
+        cb(new Error("File type not allowed: " + file.mimetype), false);
     } else {
         cb(null, true);
     }
@@ -32,7 +34,7 @@ function fileFilter(req, file, cb) {
 const upload = multer({
     storage,
     limits: {
-        fileSize: 20 * 1024 * 1024 // 20MB
+        fileSize: maxSize
     },
     fileFilter
 });
@@ -49,6 +51,7 @@ app.post("/form", (req, res) => {
 app.post("/fileform", upload.single('file'), (req, res) => {
     console.log("File info:", req.file);
     console.log("Other fields:", req.body);
+    console.log(".............................................");
     res.send({ message: "Upload received", filename: req.file?.filename });
 });
 

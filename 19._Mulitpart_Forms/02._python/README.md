@@ -8,7 +8,6 @@ $ poetry add fastapi uvicorn aiofiles python-multipart
 # How to run
 
 ```bash
-$ poetry shell
 $ poetry run uvicorn main:app --reload
 ```
 
