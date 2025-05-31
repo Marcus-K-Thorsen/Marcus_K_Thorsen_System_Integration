@@ -20,6 +20,8 @@ Follow these steps:
 4. **Install the required packages (for example, emoji):**
    ```
    pip install emoji
+   pip freeze > requirements.txt
+   pip install -r requirements.txt
    ```
 
 5. **Run the script:**

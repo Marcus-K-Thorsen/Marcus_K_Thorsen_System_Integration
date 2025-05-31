@@ -1,5 +1,8 @@
 # How to run `main.py` using pipenv
 
+Pipenv dependencies located here: 
+´C:\Users\Marcus\.virtualenvs\02._pipenv-py-aaBGg´
+
 Follow these steps:
 
 1. **Open a terminal and navigate to the project folder:**
