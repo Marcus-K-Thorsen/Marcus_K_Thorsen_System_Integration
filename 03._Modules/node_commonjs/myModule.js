@@ -12,3 +12,6 @@ class ClassB {
 
 module.exports = ClassA;
 module.exports.ClassB = ClassB;
+
+// Export multiple classes
+// module.exports = { ClassA, ClassB };

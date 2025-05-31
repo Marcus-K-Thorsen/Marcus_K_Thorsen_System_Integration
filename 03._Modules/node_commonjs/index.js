@@ -1,5 +1,6 @@
 const ClassA = require('./myModule.js');
-const { ClassB } = require('./myModule.js'); // Import ClassB as well
+const { ClassB } = require('./myModule.js');
+// const { ClassA, ClassB } = require('./myModule.js');
 
 const classA = new ClassA();
-const classB = new ClassB(); // Create an instance of ClassB
+const classB = new ClassB();
