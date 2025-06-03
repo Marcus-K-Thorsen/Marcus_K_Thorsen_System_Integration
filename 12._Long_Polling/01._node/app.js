@@ -21,7 +21,8 @@ app.get("/events/subscribe", (req, res) => {
 });
 
 app.get("/events/publish", (req, res) => {
-    const message = { data: "This is a new message" };
+    const messageText = req.query.message || "This is a new message";
+    const message = { data: messageText };
 
     clients.forEach((res) => {
         res.send(message);
