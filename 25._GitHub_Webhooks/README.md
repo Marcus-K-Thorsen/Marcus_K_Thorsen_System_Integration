@@ -10,6 +10,13 @@ Think of it as a "reverse API": instead of you asking for data, the server pushe
 **GitHub webhooks** let you receive notifications from GitHub when certain events happen in a repository (like pushes, pull requests, releases, etc.).  
 When you set up a webhook, GitHub will send an HTTP POST request to your server every time the chosen event occurs.
 
+<details>
+  <summary>Show GitHub Webhook Illustration</summary>
+
+  <img src="./GitHub_Webhook_Illustration.png" alt="GitHub Webhook Illustration">
+
+</details>
+
 ---
 
 ## How to Use the Example Node.js and Python Webhook Receivers
